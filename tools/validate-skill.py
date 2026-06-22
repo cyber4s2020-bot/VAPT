@@ -10,7 +10,10 @@ import re
 import sys
 import glob
 
-REQUIRED_FIELDS = ["name", "description", "domain", "subdomain", "tags"]
+# Kept in sync with the CI workflow (.github/workflows/validate-skills.yml),
+# which now delegates to this script so there is a single source of truth.
+REQUIRED_FIELDS = ["name", "description", "domain", "subdomain", "tags",
+                   "version", "author", "license"]
 
 # Canonical subdomain → set of accepted aliases (including canonical itself).
 # When a skill uses an alias, the validator accepts it but the canonical form
@@ -130,6 +133,14 @@ def parse_frontmatter(text):
         if stripped.startswith("- ") and current_key:
             list_values.append(stripped[2:].strip().strip('"').strip("'"))
             data[current_key] = list(list_values)  # copy so future mutations don't leak
+            continue
+
+        # Only TOP-LEVEL keys (column 0) define frontmatter fields. An indented
+        # ``key: value`` line belongs to a nested structure (e.g. a framework
+        # mapping object that has its own ``name:``/``id:``) and must NOT be
+        # treated as a top-level field — otherwise a nested ``name:`` clobbers
+        # the skill's real ``name``.
+        if line[:1].isspace():
             continue
 
         # Handle inline list: tags: [a, b, c]
