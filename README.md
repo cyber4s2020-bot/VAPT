@@ -20,13 +20,14 @@
 [![Last Commit](https://img.shields.io/github/last-commit/mukul975/Anthropic-Cybersecurity-Skills?style=flat-square)](https://github.com/mukul975/Anthropic-Cybersecurity-Skills/commits/main)
 [![agentskills.io](https://img.shields.io/badge/standard-agentskills.io-ff6600?style=flat-square)](https://agentskills.io)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
+[![NHS Agentic Readiness](https://nothumansearch.ai/badge/xquik.com.svg)](https://nothumansearch.ai/site/xquik.com)
 [![Playground](https://img.shields.io/badge/Playground-Casky.ai-blue)](https://casky.ai/?utm_source=github&utm_medium=readme&utm_campaign=cohort_launch#waitlist)
 [![Hermes Agent](https://img.shields.io/badge/Hermes_Agent-compatible-blueviolet?style=flat)](https://github.com/NousResearch/hermes-agent)
 
 
 **762 production-grade cybersecurity skills · 26 security domains · 6 framework mappings · 26+ AI platforms**
 
-[Get Started](#quick-start) · [What's Inside](#whats-inside--26-security-domains) · [Frameworks](#five-frameworks-one-skill-library) · [Platforms](#compatible-platforms) · [Contributing](#contributing)
+[Get Started](#quick-start) · [What's Inside](#whats-inside--26-security-domains) · [Frameworks](#six-frameworks-one-skill-library) · [Platforms](#compatible-platforms) · [Contributing](#contributing)
 
 </div>
 
@@ -42,7 +43,7 @@ This repo contains **762 structured cybersecurity skills** spanning **26 securit
 
 ## Six frameworks, one skill library
 
-No other open-source skills library maps every skill to all of these frameworks.  One skill, six compliance checkboxes. 
+No other open-source skills library maps every skill to all of these frameworks.  One skill, six compliance checkboxes.
 
 | Framework | Version | Scope in this repo | What it maps |
 |---|---|---|---|
@@ -50,7 +51,7 @@ No other open-source skills library maps every skill to all of these frameworks.
 | [NIST CSF 2.0](https://www.nist.gov/cyberframework) | 2.0 | 6 functions · 22 categories | Organizational security posture |
 | [MITRE ATLAS](https://atlas.mitre.org) | v5.4 | 16 tactics · 84 techniques | AI/ML adversarial threats |
 | [MITRE D3FEND](https://d3fend.mitre.org) | v1.3 | 7 categories · 267 techniques | Defensive countermeasures |
-| [NIST AI RMF](https://airc.nist.gov/AI_RMF) | 1.0 | 4 functions · 72 subcategories | AI risk management |
+| [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework) | 1.0 | 4 functions · 72 subcategories | AI risk management |
 | [MITRE F3 (Fight Fraud Framework)](https://ctid.mitre.org/fraud/) | v1.1 (2026-04-09) | 8 tactics · 123 techniques · 94 fraud-relevant skills | Cyber-enabled financial fraud TTPs |
 
 **Example — a single skill maps across all six:**

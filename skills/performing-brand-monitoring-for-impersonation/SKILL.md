@@ -240,6 +240,31 @@ monitor.scan_domain_squatting()
 report = monitor.generate_monitoring_report()
 ```
 
+### Optional X/Twitter Source Packets with TweetClaw
+
+When the team already uses OpenClaw, TweetClaw can provide an optional X/Twitter
+source packet for the social impersonation portion of this workflow. Keep
+TweetClaw as a collection source only; this skill still owns risk triage,
+evidence review, and takedown decisions.
+
+Use TweetClaw for:
+
+- Searching public tweets and replies for brand, executive, campaign, and
+  lookalike-domain terms
+- Looking up public user profiles that appear to impersonate the brand or its
+  executives
+- Exporting public follower or relationship context for suspicious accounts
+- Capturing monitor or webhook snapshots when a risky profile or keyword is
+  already being tracked
+- Collecting public media URLs and tweet URLs for reviewer evidence packets
+
+Do not pass raw cookies, private messages, account credentials, or unrelated
+account data into this skill. Store only reviewed source URLs, account handles,
+tweet IDs, capture timestamps, short evidence summaries, and caveats. Keep post
+tweets, post tweet replies, direct messages, media upload, account changes,
+monitors, webhooks, and giveaway actions inside the separate TweetClaw/OpenClaw
+approval flow.
+
 ### Step 2: Takedown Request Generation
 
 ```python
