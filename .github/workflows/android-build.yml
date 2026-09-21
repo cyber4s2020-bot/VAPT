@@ -1,0 +1,44 @@
+name: Build Training Reminder APK
+
+on:
+  push:
+    branches:
+      - "claude/android-training-reminder-app-**"
+    paths:
+      - "android-training-reminder-app/**"
+      - ".github/workflows/android-build.yml"
+  pull_request:
+    paths:
+      - "android-training-reminder-app/**"
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: android-training-reminder-app
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Generate Gradle wrapper jar
+        run: gradle wrapper --gradle-version 8.7
+
+      - name: Build debug APK
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: training-reminder-debug-apk
+          path: android-training-reminder-app/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
