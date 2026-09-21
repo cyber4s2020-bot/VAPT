@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Training Reminder</string>
+
+    <string name="notif_channel_sync_name">Calendar sync</string>
+    <string name="notif_channel_sync_desc">Background checks for new training sessions in Google Calendar</string>
+    <string name="notif_channel_alarm_name">Training alarms</string>
+    <string name="notif_channel_alarm_desc">Alarm reminders for upcoming training sessions</string>
+
+    <string name="alarm_notification_title">Training session starting soon</string>
+    <string name="alarm_notification_text">%1$s starts in %2$d minutes</string>
+
+    <string name="permission_calendar_rationale">Training Reminder needs access to your Calendar to find your training sessions and schedule alarms for them. Your events never leave this device.</string>
+    <string name="permission_notification_rationale">Notification access is needed so the alarm can alert you when a training session is about to start.</string>
+    <string name="permission_exact_alarm_rationale">Allow exact alarms so reminders fire at the precise time, 15 minutes before each session.</string>
+
+    <string name="grant_permission">Grant permission</string>
+    <string name="open_settings">Open settings</string>
+
+    <string name="empty_state_title">No upcoming training sessions</string>
+    <string name="empty_state_subtitle">Events from your Google Calendar matching your filter will show up here</string>
+
+    <string name="dismiss">Dismiss</string>
+    <string name="snooze">Snooze 5 min</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_lead_time">Reminder lead time (minutes)</string>
+    <string name="settings_keyword_filter">Only remind for events containing</string>
+    <string name="settings_keyword_hint">e.g. training (leave blank for all events)</string>
+</resources>
